@@ -76,6 +76,8 @@ RUN cd /home/ubuntu/HGT-ID_v1.0 \
     && gunzip ucsc.hg19.fasta.gz \
     && bash setup.sh -r ucsc.hg19.fasta
 
-ENV HGT-ID /home/ubuntu/HGT-ID_v1.0
+#ENV HGT-ID /home/ubuntu/HGT-ID_v1.0
+
+ENV PATH /home/ubuntu/HGT-ID_v1.0:$PATH
 
 RUN mkdir /home/ubuntu/data
