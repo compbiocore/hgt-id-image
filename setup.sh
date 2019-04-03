@@ -51,7 +51,7 @@ fi
 
 if [ "$verbose" ]; then set -x; fi
 
-INSTALL_DIR=/home/ubuntu
+INSTALL_DIR=/home/ubuntu/HGT-ID_v1.0/
 BIN_DIR=$INSTALL_DIR/bin
 
 echo -e "=========================================="
