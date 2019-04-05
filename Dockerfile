@@ -78,6 +78,6 @@ RUN cd /home/ubuntu/HGT-ID_v1.0 \
 
 ENV PATH /home/ubuntu/HGT-ID_v1.0:$PATH
 
-RUN chmod -R 777 /home/ubuntu
+#RUN chmod -R 777 /home/ubuntu
 
 RUN mkdir /home/ubuntu/data
