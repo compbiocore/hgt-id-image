@@ -78,4 +78,7 @@ RUN cd /home/ubuntu/HGT-ID_v1.0 \
 
 ENV PATH /home/ubuntu/HGT-ID_v1.0:$PATH
 
+RUN cd /home/ubuntu \
+  && wget https://raw.githubusercontent.com/compbiocore/hgt-id_image/master/hgt_import.sh
+
 RUN mkdir /home/ubuntu/data
