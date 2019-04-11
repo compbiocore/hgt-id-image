@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 LABEL maintainer "Andrew Leith <andrew_leith@brown.edu>"
 LABEL repository compbiocore/hgt-id-image
 LABEL image hgt-id-image
-LABEL tag latest
+LABEL tag v1
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
@@ -72,12 +72,10 @@ RUN cd /home/ubuntu \
 ENV PATH /home/ubuntu/samtools/bin:$PATH
 
 RUN cd /home/ubuntu/HGT-ID_v1.0 \
-    && wget ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/hg19/ucsc.hg19.fasta.gz \
-    && gunzip ucsc.hg19.fasta.gz \
-    && bash setup.sh -r ucsc.hg19.fasta
+    && wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz \
+    && gunzip hg19.fa.gz \
+    && bash setup.sh -r hg19.fa
 
 ENV PATH /home/ubuntu/HGT-ID_v1.0:$PATH
-
-#RUN chmod -R 777 /home/ubuntu
 
 RUN mkdir /home/ubuntu/data
